@@ -14,11 +14,14 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Tipo {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @Column(name = "id")
+    private Integer tipo_id;
 
-    private  String descricao;
+
+    private String descricao;
 
 
 }

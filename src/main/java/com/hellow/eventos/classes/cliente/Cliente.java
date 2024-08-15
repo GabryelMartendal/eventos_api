@@ -1,4 +1,4 @@
-package com.hellow.eventos.classes.endereco;
+package com.hellow.eventos.classes.cliente;
 
 import com.hellow.eventos.classes.tipo.Tipo;
 import jakarta.persistence.*;
@@ -7,28 +7,27 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity(name = "endereco")
-@Table(name = "endereco")
+import java.util.Date;
+
+@Entity(name = "cliente")
+@Table(name = "cliente")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class Endereco {
+public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Integer endereco_id;
-    private String logradouro;
+    private Integer cliente_id;
     private String nome;
-    private Integer numero;
-    private String  cep;
-    private String bairo;
-    private String cidade;
-    private String estado;
-    private String pais;
-    private String complemento;
+    private String sobrenome;
+    private Integer cpf;
+    private Integer  telefone;
+    private String email;
+
 
     @ManyToOne
     @JoinColumn(name = "tipo_id")
