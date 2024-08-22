@@ -20,11 +20,11 @@ public class Endereco {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer endereco_id;
-    private String logradouro;
     private String nome;
+    private String logradouro;
     private Integer numero;
     private String  cep;
-    private String bairo;
+    private String bairro;
     private String cidade;
     private String estado;
     private String pais;

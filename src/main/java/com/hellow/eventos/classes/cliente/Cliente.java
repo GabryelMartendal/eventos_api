@@ -26,7 +26,7 @@ public class Cliente {
     private String nome;
     private String sobrenome;
     private Integer cpf;
-    private Integer  telefone;
+    private Integer telefone;
     private String email;
 
 
@@ -35,7 +35,4 @@ public class Cliente {
     private Endereco endereco;
 
 
-    @ManyToOne
-    @JoinColumn(name = "tipo_id")
-    private Tipo tipo;
 }
